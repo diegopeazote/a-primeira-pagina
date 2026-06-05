@@ -127,9 +127,12 @@ body{
     background:white;
     padding:12px;
     border-radius:10px;
+
     opacity:1;
     transform:none;
-    transition:none;
+
+    transition:all 1s ease;
+
     box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
