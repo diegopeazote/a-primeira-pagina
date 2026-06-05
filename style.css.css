@@ -127,12 +127,10 @@ body{
     background:white;
     padding:12px;
     border-radius:10px;
-    transform:rotate(-2deg);
-    opacity:0;
-transform:translateY(60px);
-transition:all 1s ease;
-box-shadow:
-0 10px 30px rgba(0,0,0,.4);
+    opacity:1;
+    transform:none;
+    transition:none;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
 .foto:nth-child(even){
@@ -508,8 +506,4 @@ border-left:5px solid #c62828;
     opacity:.9;
     color:white;
     min-height:30px;
-}
-.foto.show{
-    opacity:1;
-    transform:translateY(0);
 }
