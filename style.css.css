@@ -302,45 +302,7 @@ border-left:5px solid #c62828;
     font-weight:bold;
     margin-top:50px;
     color:#c62828;
-}
-/* ========================= */
-/* ESTRELAS */
-/* ========================= */
 
-.estrelas{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    pointer-events:none;
-    z-index:-1;
-    background-image:
-    radial-gradient(
-        white 1px,
-        transparent 1px
-    );
-    background-size:50px 50px;
-    opacity:.15;
-
-    animation:
-    brilhoEstrelas 8s infinite alternate;
-}
-
-@keyframes brilhoEstrelas{
-
-    from{
-        opacity:.08;
-    }
-
-    to{
-        opacity:.18;
-    }
-
-}
-.foto.show{
-    opacity:1;
-    transform:translateY(0);
 }
 /* ========================= */
 /* FUTURO */
