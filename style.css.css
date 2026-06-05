@@ -1,0 +1,571 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:#ffffff;
+    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    height:100vh;
+    width:100%;
+}
+
+.hero img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:
+    brightness(25%)
+    blur(1px);
+}
+.overlay{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    width:90%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+.data,
+.hora{
+    color:#c62828;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.hero h1{
+
+    font-size:2.3rem;
+
+    margin:25px 0;
+
+    line-height:1.3;
+
+    text-shadow:
+    0 0 20px rgba(0,0,0,.8);
+
+}
+
+
+.hero h2{
+    font-size:1.4rem;
+    margin-bottom:20px;
+}
+
+.frase{
+    opacity:.8;
+    margin-bottom:30px;
+}
+
+.botao{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background:#c62828;
+    padding:15px 30px;
+    border-radius:40px;
+    margin-top:15px;
+}
+
+/* CONTADOR */
+
+.contador{
+    text-align:center;
+    padding:80px 20px;
+    position:relative;
+    z-index:10;
+}
+
+.contador h2{
+    margin-bottom:30px;
+}
+
+#contadorTempo{
+    font-size:1.4rem;
+    line-height:1.6;
+    margin-top:15px;
+}
+
+/* SEÇÕES */
+
+.secao{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.secao h2{
+    margin-bottom:40px;
+}
+
+/* FOTOS */
+
+.foto{
+    margin:40px auto;
+    width:90%;
+    max-width:450px;
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    transform:rotate(-2deg);
+    opacity:0;
+transform:translateY(60px);
+transition:all 1s ease;
+box-shadow:
+0 10px 30px rgba(0,0,0,.4);
+}
+
+.foto:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.foto img{
+    width:100%;
+    display:block;
+    border-radius:5px;
+    aspect-ratio:4/5;
+object-fit:cover;
+}
+
+.foto p{
+    color:#111;
+    margin-top:15px;
+    font-size:1rem;
+    line-height:1.5;
+}
+
+.destaque{
+    max-width:550px;
+}
+
+/* FUTURO */
+
+.sonhos{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:30px;
+}
+
+.sonhos div{
+    border:1px solid #c62828;
+    padding:20px;
+    border-radius:15px;
+}
+
+/* CARTA */
+
+.carta{
+    padding:100px 25px;
+    background:#111111;
+}
+
+.carta h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.texto-carta{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+    font-size:1.1rem;
+    font-size:1.1rem;
+line-height:2.2;
+border-left:5px solid #c62828;
+}
+
+/* FINAL */
+
+.final{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.final img{
+    width:90%;
+    max-width:600px;
+    border-radius:15px;
+    margin-bottom:30px;
+    border:3px solid rgba(255,255,255,.15);
+}
+
+.final h2{
+    margin-bottom:25px;
+}
+
+.final h3{
+    color:#c62828;
+    margin-bottom:20px;
+}
+
+.final p{
+    opacity:.7;
+}
+
+/* COMPUTADOR */
+
+@media(min-width:768px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero h2{
+        font-size:2rem;
+    }
+
+    #contadorTempo{
+        font-size:2rem;
+    }
+
+}/* ========================= */
+/* CARTA ESPECIAL */
+/* ========================= */
+
+.carta{
+    padding:100px 25px;
+    background:linear-gradient(
+        to bottom,
+        #111111,
+        #1a1a1a
+    );
+}
+
+.titulo-carta{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:2rem;
+}
+
+.texto-carta{
+    max-width:800px;
+    margin:auto;
+    background:#f8f3e8;
+    color:#222;
+    padding:40px 25px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,.4);
+}
+
+.texto-carta p{
+    line-height:2;
+    margin-bottom:30px;
+}
+
+/* animação */
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* frases importantes */
+
+.destaque{
+    font-size:1.2rem;
+    font-weight:bold;
+    text-align:center;
+}
+
+/* te vivo */
+
+.final-carta{
+    text-align:center;
+    font-size:2rem;
+    font-weight:bold;
+    margin-top:50px;
+    color:#c62828;
+}
+/* ========================= */
+/* ESTRELAS */
+/* ========================= */
+
+.estrelas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:-1;
+    background-image:
+    radial-gradient(
+        white 1px,
+        transparent 1px
+    );
+    background-size:50px 50px;
+    opacity:.15;
+
+    animation:
+    brilhoEstrelas 8s infinite alternate;
+}
+
+@keyframes brilhoEstrelas{
+
+    from{
+        opacity:.08;
+    }
+
+    to{
+        opacity:.18;
+    }
+
+}
+.foto.show{
+    opacity:1;
+    transform:translateY(0);
+}
+/* ========================= */
+/* FUTURO */
+/* ========================= */
+
+.futuro{
+    padding-top:100px;
+}
+
+.sonho-card{
+
+    background:#151515;
+    border:1px solid #c62828;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin:20px auto;
+
+    max-width:600px;
+
+    transition:.4s;
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+}
+
+.sonho-card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.sonho-card:hover{
+
+    transform:scale(1.03);
+
+}
+
+.sonho-card h3{
+
+    margin-bottom:15px;
+
+    color:#c62828;
+
+}
+
+.sonho-card p{
+
+    line-height:1.8;
+
+}
+/* ========================= */
+/* FINAL CINEMATOGRÁFICO */
+/* ========================= */
+
+.final{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.final-conteudo{
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+.final img{
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:20px;
+
+    margin-bottom:50px;
+
+    box-shadow:
+    0 0 40px rgba(0,0,0,.4);
+
+}
+
+.frase-final{
+
+    margin:40px 0;
+
+    line-height:1.8;
+
+}
+
+.frase-final:first-of-type{
+
+    font-size:2rem;
+
+}
+
+.frase-final:nth-of-type(2){
+
+    color:#c62828;
+
+    font-size:1.5rem;
+
+}
+
+.assinatura{
+
+    margin-top:70px;
+
+}
+
+.nomes{
+
+    font-size:2.4rem;
+
+    font-weight:bold;
+
+    color:#c62828;
+
+}
+
+}
+
+.data-final{
+
+    margin-top:10px;
+
+    opacity:.8;
+
+}
+
+/* animação */
+
+.revelar-final{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all 1.2s ease;
+
+}
+
+.revelar-final.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+.frase-abertura{
+    margin-bottom: 40px;
+}
+#contadorTempo{
+
+    display:block;
+
+    position:relative;
+
+    margin-top:40px;
+
+    z-index:999;
+
+}
+.botao-musica{
+
+    margin-top:20px;
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#c62828;
+
+    color:white;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.botao-musica:hover{
+
+    transform:scale(1.05);
+
+}
+.estrelas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+    background-image:
+    radial-gradient(2px 2px at 20px 30px, white, transparent),
+    radial-gradient(2px 2px at 100px 80px, white, transparent),
+    radial-gradient(1px 1px at 200px 150px, white, transparent),
+    radial-gradient(2px 2px at 300px 40px, white, transparent),
+    radial-gradient(1px 1px at 400px 120px, white, transparent);
+    animation:piscar 4s infinite alternate;
+}
+
+@keyframes piscar{
+    from{opacity:.4;}
+    to{opacity:1;}
+}
+#apelidoAleatorio{
+    margin-top:15px;
+    font-style:italic;
+    opacity:.9;
+    color:white;
+    min-height:30px;
+}
