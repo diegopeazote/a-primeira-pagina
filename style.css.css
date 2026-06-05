@@ -509,3 +509,7 @@ border-left:5px solid #c62828;
     color:white;
     min-height:30px;
 }
+.foto.show{
+    opacity:1;
+    transform:translateY(0);
+}
