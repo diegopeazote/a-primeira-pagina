@@ -503,24 +503,7 @@ border-left:5px solid #c62828;
     transform:scale(1.05);
 
 }
-.estrelas{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    pointer-events:none;
-    z-index:0;
 
-    background-image:
-    radial-gradient(white 1px, transparent 1px);
-
-    background-size:50px 50px;
-
-    opacity:.15;
-
-    animation: brilhoEstrelas 8s infinite alternate;
-}
 
 .hero,
 .contador,
